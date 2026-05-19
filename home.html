@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+  /* BASIC RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+}
+
+nav .logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav ul li a:hover {
+  color: #f39c12;
+}
+
+/* HOME SECTION */
+#home {
+  background-color: #eaf0fb;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+#home img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #2c3e50;
+  margin-bottom: 20px;
+}
+
+#home h1 {
+  font-size: 36px;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+#home h2 {
+  font-size: 20px;
+  color: #f39c12;
+  margin-bottom: 15px;
+}
+
+#home p {
+  font-size: 16px;
+  color: #555;
+  max-width: 500px;
+  margin: 0 auto 25px;
+  line-height: 1.7;
+}
+
+#home a {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 28px;
+  background-color: #2c3e50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+#home a:hover {
+  background-color: #f39c12;
+}
+
+/* ABOUT SECTION */
+#about {
+  padding: 60px 80px;
+  background-color: #fff;
+}
+
+#about h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  border-left: 5px solid #f39c12;
+  padding-left: 12px;
+}
+
+#about p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #555;
+  max-width: 750px;
+}
+
+/* SKILLS SECTION */
+#skills {
+  padding: 60px 80px;
+  background-color: #f4f6f9;
+}
+
+#skills h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  border-left: 5px solid #f39c12;
+  padding-left: 12px;
+}
+
+.skills-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 15px;
+}
+
+/* PROJECTS SECTION */
+#projects {
+  padding: 60px 80px;
+  background-color: #fff;
+}
+
+#projects h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  border-left: 5px solid #f39c12;
+  padding-left: 12px;
+}
+
+.project-card {
+  background-color: #f4f6f9;
+  border-left: 5px solid #2c3e50;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.project-card span {
+  background-color: #2c3e50;
+  color: white;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* CONTACT SECTION */
+#contact {
+  padding: 60px 80px;
+  background-color: #2c3e50;
+  color: white;
+}
+
+#contact h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  border-left: 5px solid #f39c12;
+  padding-left: 12px;
+}
+
+#contact p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.contact-info a {
+  color: #f39c12;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a252f;
+  color: #aaa;
+  font-size: 14px;
+}
+
+  </style>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">Tamilarasi S</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HOME SECTION -->
+<section id="home">
+  <img src="photo.jpg" alt="Tamilarasi S">
+  <h1>Hi, I'm Tamilarasi S</h1>
+  <h2>Java Developer & Web Developer</h2>
+  <p>A passionate fresher from Kanchipuram, looking for opportunities to grow and contribute in the tech industry.</p>
+  <a href="#contact">Hire Me</a>
+  <a href="#projects">View My Work</a>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    Hello! I'm Tamilarasi S, a fresher Java Developer based in Kanchipuram, Tamil Nadu.
+    I have completed my studies and I am passionate about building useful applications
+    using Java, HTML, and CSS. I enjoy solving real-world problems through technology
+    and I am always eager to learn new things. I am currently looking for an opportunity
+    where I can apply my skills and grow as a developer.
+  </p>
+</section>
+
+<!-- SKILLS SECTION -->
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skills-box">
+    <div class="skill">Java</div>
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">IOT Basics</div>
+    <div class="skill">Arduino</div>
+    <div class="skill">Problem Solving</div>
+  </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects">
+  <h2>My Projects</h2>
+
+  <div class="project-card">
+    <h3>Smart Irrigation & Climate Control System</h3>
+    <p>
+      An IoT based project developed for college project expo. This system automatically
+      controls irrigation and monitors climate conditions using a microcontroller, Arduino,
+      and sensors. It helps farmers save water and improve crop health efficiently.
+    </p>
+    <span>IOT | Arduino | Sensors | Microcontroller</span>
+  </div>
+
+  <div class="project-card">
+    <h3>Web Based Skill Swapping Application</h3>
+    <p>
+      A cost-effective web application where users can swap their skills with others
+      using a points system. Instead of paying money, users earn and spend points
+      by teaching and learning skills from each other.
+    </p>
+    <span>HTML | CSS | Web Application</span>
+  </div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Feel free to reach out to me for opportunities or collaborations!</p>
+
+  <div class="contact-info">
+    <p>📧 sss.tamlarasi12@gmail.com</p>
+    <p>📞 6379942447</p>
+    <p>📍 Kanchipuram, Tamil Nadu</p>
+    <p>
+      <a href="https://www.linkedin.com/in/tamilarasi-s-6668162ba" target="_blank">
+        🔗 LinkedIn Profile
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2024 Tamilarasi S. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
