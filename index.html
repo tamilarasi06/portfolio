@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamilarasi S | Portfolio</title>
+  <style>
+
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111111;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid #f39c12;
+    }
+
+    nav .logo {
+      color: #f39c12;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav ul li a:hover {
+      color: #f39c12;
+    }
+
+    /* HOME SECTION */
+    #home {
+      background-color: #111111;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    #home img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #f39c12;
+      margin-bottom: 20px;
+    }
+
+    #home h1 {
+      font-size: 36px;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    #home h2 {
+      font-size: 22px;
+      color: #f39c12;
+      margin-bottom: 15px;
+      min-height: 30px;
+    }
+
+    #home p {
+      font-size: 16px;
+      color: #aaaaaa;
+      max-width: 500px;
+      margin: 0 auto 25px;
+      line-height: 1.7;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-group a {
+      display: inline-block;
+      padding: 12px 28px;
+      background-color: #f39c12;
+      color: #0a0a0a;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-group a:hover {
+      background-color: #ffffff;
+      color: #0a0a0a;
+    }
+
+    .btn-outline {
+      background-color: transparent !important;
+      border: 2px solid #f39c12;
+      color: #f39c12 !important;
+    }
+
+    .btn-outline:hover {
+      background-color: #f39c12 !important;
+      color: #0a0a0a !important;
+    }
+
+    /* SECTION SHARED */
+    section {
+      padding: 60px 80px;
+    }
+
+    section h2 {
+      font-size: 28px;
+      color: #f39c12;
+      margin-bottom: 30px;
+      border-left: 5px solid #f39c12;
+      padding-left: 12px;
+    }
+
+    /* ABOUT SECTION */
+    #about {
+      background-color: #0a0a0a;
+    }
+
+    #about p {
+      font-size: 16px;
+      line-height: 1.9;
+      color: #aaaaaa;
+      max-width: 750px;
+    }
+
+    #about .about-details {
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    #about .detail-box {
+      background-color: #111111;
+      border: 1px solid #f39c12;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      color: #ffffff;
+    }
+
+    #about .detail-box span {
+      color: #f39c12;
+      font-weight: bold;
+    }
+
+    /* EDUCATION SECTION */
+    #education {
+      background-color: #111111;
+    }
+
+    .edu-card {
+      background-color: #0a0a0a;
+      border-left: 5px solid #f39c12;
+      padding: 25px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(243, 156, 18, 0.2);
+    }
+
+    .edu-card h3 {
+      font-size: 20px;
+      color: #f39c12;
+      margin-bottom: 8px;
+    }
+
+    .edu-card p {
+      font-size: 15px;
+      color: #aaaaaa;
+      line-height: 1.8;
+      margin-bottom: 5px;
+    }
+
+    .edu-card .edu-year {
+      display: inline-block;
+      background-color: #f39c12;
+      color: #0a0a0a;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    /* SKILLS SECTION */
+    #skills {
+      background-color: #0a0a0a;
+    }
+
+    .skills-title {
+      font-size: 16px;
+      color: #f39c12;
+      margin-bottom: 15px;
+      margin-top: 25px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .skills-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+
+    .skill {
+      background-color: #111111;
+      color: #f39c12;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-size: 15px;
+      border: 2px solid #f39c12;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      background-color: #f39c12;
+      color: #0a0a0a;
+    }
+
+    .skill.soft {
+      border-color: #aaaaaa;
+      color: #aaaaaa;
+    }
+
+    .skill.soft:hover {
+      background-color: #aaaaaa;
+      color: #0a0a0a;
+    }
+
+    /* PROJECTS SECTION */
+    #projects {
+      background-color: #111111;
+    }
+
+    .project-card {
+      background-color: #0a0a0a;
+      border-left: 5px solid #f39c12;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(243, 156, 18, 0.2);
+    }
+
+    .project-card h3 {
+      font-size: 20px;
+      color: #f39c12;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 15px;
+      color: #aaaaaa;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .project-card .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .project-card .tag {
+      background-color: #f39c12;
+      color: #0a0a0a;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .project-card .live-link {
+      display: inline-block;
+      color: #f39c12;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #f39c12;
+      padding-bottom: 2px;
+      transition: 0.3s;
+    }
+
+    .project-card .live-link:hover {
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+
+    /* CERTIFICATES SECTION */
+    #certificates {
+      background-color: #0a0a0a;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .cert-card {
+      background-color: #111111;
+      border: 1px solid #f39c12;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .cert-card:hover {
+      background-color: #f39c12;
+      transform: translateY(-5px);
+    }
+
+    .cert-card:hover .cert-icon,
+    .cert-card:hover .cert-name,
+    .cert-card:hover .cert-org {
+      color: #0a0a0a;
+    }
+
+    .cert-icon {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .cert-name {
+      font-size: 14px;
+      color: #ffffff;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .cert-org {
+      font-size: 12px;
+      color: #aaaaaa;
+    }
+
+    /* CERTIFICATE MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0,0,0,0.95);
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal img {
+      max-width: 80%;
+      max-height: 80vh;
+      border: 3px solid #f39c12;
+      border-radius: 8px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 35px;
+      color: #f39c12;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* CONTACT SECTION */
+    #contact {
+      background-color: #111111;
+    }
+
+    #contact .contact-intro {
+      font-size: 16px;
+      margin-bottom: 25px;
+      color: #aaaaaa;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-info p {
+      font-size: 16px;
+      color: #ffffff;
+    }
+
+    .contact-info a {
+      color: #f39c12;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* BACK TO TOP */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #f39c12;
+      color: #0a0a0a;
+      border: none;
+      padding: 12px 16px;
+      font-size: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      z-index: 200;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    #backToTop:hover {
+      background-color: #ffffff;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0a0a0a;
+      color: #aaaaaa;
+      font-size: 14px;
+      border-top: 2px solid #f39c12;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      section { padding: 40px 20px; }
+      nav { padding: 15px 20px; }
+      nav ul { gap: 10px; }
+      nav ul li a { font-size: 12px; }
+      .cert-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .cert-grid { grid-template-columns: 1fr; }
+      #home h1 { font-size: 28px; }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">Tamilarasi S</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <img src="photo.jpg" alt="Tamilarasi S">
+  <h1>Hi, I'm Tamilarasi S</h1>
+  <h2 id="typing"></h2>
+  <p>A passionate 3rd year IT student from Kanchipuram, eager to grow and contribute in the tech industry.</p>
+  <div class="btn-group">
+    <a href="#contact">Hire Me</a>
+    <a href="#projects">View My Work</a>
+    <a href="resume.pdf" download class="btn-outline">Download Resume</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hello! I'm Tamilarasi S, a 3rd year B.Tech Information Technology student at Adhi College of Engineering and Technology, Kanchipuram, Tamil Nadu. I am passionate about building useful applications using Java, HTML, and CSS. I enjoy solving real-world problems through technology and I am always eager to learn new things. I am currently looking for internship or job opportunities where I can apply my skills and grow as a developer.</p>
+  <div class="about-details">
+    <div class="detail-box"><span>🎓 Degree:</span> B.Tech Information Technology</div>
+    <div class="detail-box"><span>🏫 College:</span> Adhi College of Engineering and Technology</div>
+    <div class="detail-box"><span>📚 Current:</span> 3rd Year — 6th Semester</div>
+    <div class="detail-box"><span>📍 Location:</span> Kanchipuram, Tamil Nadu</div>
+    <div class="detail-box"><span>💼 Status:</span> Open to Internship & Work</div>
+    <div class="detail-box"><span>📧 Email:</span> sss.tamlarasi12@gmail.com</div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Education</h2>
+
+  <div class="edu-card">
+    <h3>B.Tech — Information Technology</h3>
+    <p>🏫 Adhi College of Engineering and Technology</p>
+    <p>📍 Kanchipuram, Tamil Nadu</p>
+    <p>📚 Currently in 3rd Year — 6th Semester</p>
+    <span class="edu-year">2023 — 2027</span>
+  </div>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>My Skills</h2>
+
+  <div class="skills-title">Technical Skills</div>
+  <div class="skills-box">
+    <div class="skill">☕ Java</div>
+    <div class="skill">🔵 C Programming</div>
+    <div class="skill">🌐 HTML</div>
+    <div class="skill">🎨 CSS</div>
+    <div class="skill">🐍 Python</div>
+    <div class="skill">🌍 Web Design</div>
+  </div>
+
+  <div class="skills-title">Soft Skills</div>
+  <div class="skills-box">
+    <div class="skill soft">💬 Communication</div>
+    <div class="skill soft">🤝 Team Work</div>
+    <div class="skill soft">⚡ Quick Learner</div>
+    <div class="skill soft">🔧 Problem Solving</div>
+    <div class="skill soft">⏰ Time Management</div>
+    <div class="skill soft">💡 Innovation</div>
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>My Projects</h2>
+
+  <div class="project-card">
+    <h3>🌱 Smart Irrigation & Climate Control System</h3>
+    <p>An IoT based project developed for college project expo. This system automatically controls irrigation and monitors climate conditions using a microcontroller, Arduino, and sensors. It helps farmers save water and improve crop health efficiently.</p>
+    <div class="tags">
+      <span class="tag">IoT</span>
+      <span class="tag">Arduino</span>
+      <span class="tag">Sensors</span>
+      <span class="tag">Microcontroller</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>🔄 Web Based Skill Swapping Application</h3>
+    <p>A cost-effective web application where users can swap their skills with others using a points system. Instead of paying money, users earn and spend points by teaching and learning skills from each other.</p>
+    <div class="tags">
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">Web Application</span>
+      <span class="tag">Points System</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>🌐 Personal Portfolio Website</h3>
+    <p>Designed and developed a fully responsive personal portfolio website from scratch using HTML and CSS. The portfolio showcases my skills, projects, certificates, and contact details in a professional black and gold theme.</p>
+    <div class="tags">
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">Responsive Design</span>
+      <span class="tag">Web Development</span>
+    </div>
+    <a href="https://tamilarasi06.github.io/portfolio" target="_blank" class="live-link">🔗 Live Demo →</a>
+  </div>
+
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates">
+  <h2>My Certificates</h2>
+  <div class="cert-grid">
+
+    <div class="cert-card" onclick="openModal('cert1.jpg')">
+      <div class="cert-icon">☕</div>
+      <div class="cert-name">Java Programming</div>
+      <div class="cert-org">SoloLearn</div>
+    </div>
+
+    <div class="cert-card" onclick="openModal('cert2.jpg')">
+      <div class="cert-icon">🧩</div>
+      <div class="cert-name">Symposium Participant</div>
+      <div class="cert-org">Kings College of Engineering</div>
+    </div>
+
+    <div class="cert-card" onclick="openModal('cert3.jpg')">
+      <div class="cert-icon">🌍</div>
+      <div class="cert-name">Web Design Basics Webinar</div>
+      <div class="cert-org">Webinar Certificate</div>
+    </div>
+
+    <div class="cert-card" onclick="openModal('cert4.jpg')">
+      <div class="cert-icon">🐍</div>
+      <div class="cert-name">Python Full Stack Webinar</div>
+      <div class="cert-org">Webinar Certificate</div>
+    </div>
+
+    <div class="cert-card" onclick="openModal('cert5.jpg')">
+      <div class="cert-icon">☕</div>
+      <div class="cert-name">Java Course Completed</div>
+      <div class="cert-org">NPTEL</div>
+    </div>
+
+    <div class="cert-card" onclick="openModal('cert6.jpg')">
+      <div class="cert-icon">🎨</div>
+      <div class="cert-name">UI/UX Webinar</div>
+      <div class="cert-org">Webinar Certificate</div>
+    </div>
+
+    <div class="cert-card" onclick="openModal('cert7.jpg')">
+      <div class="cert-icon">💻</div>
+      <div class="cert-name">Hackathon Participant</div>
+      <div class="cert-org">Participant Certificate</div>
+    </div>
+
+    <div class="cert-card" onclick="openModal('cert8.jpg')">
+      <div class="cert-icon">☕</div>
+      <div class="cert-name">Java Programming Completed</div>
+      <div class="cert-org">Adhi College of Engineering</div>
+    </div>
+
+    <div class="cert-card" onclick="openModal('cert9.jpg')">
+      <div class="cert-icon">🔵</div>
+      <div class="cert-name">C Programming Completed</div>
+      <div class="cert-org">Adhi College of Engineering</div>
+    </div>
+
+    <div class="cert-card" onclick="openModal('cert10.jpg')">
+      <div class="cert-icon">🏆</div>
+      <div class="cert-name">2nd Prize — Code Debugging</div>
+      <div class="cert-org">Aadhiparasakthi College of Engineering</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p class="contact-intro">Feel free to reach out to me for internship, job opportunities or collaborations!</p>
+  <div class="contact-info">
+    <p>📧 <a href="mailto:sss.tamlarasi12@gmail.com">sss.tamlarasi12@gmail.com</a></p>
+    <p>📞 <a href="tel:6379942447">6379942447</a></p>
+    <p>📍 Kanchipuram, Tamil Nadu</p>
+    <p><a href="https://www.linkedin.com/in/tamilarasi-s-6668162ba" target="_blank">🔗 LinkedIn Profile</a></p>
+    <p><a href="https://github.com/tamilarasi06" target="_blank">🐙 GitHub Profile</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2024 Tamilarasi S. All Rights Reserved. | Made with ❤️ using HTML & CSS</p>
+</footer>
+
+<!-- BACK TO TOP BUTTON -->
+<button id="backToTop" onclick="scrollToTop()">▲</button>
+
+<!-- CERTIFICATE MODAL -->
+<div class="modal" id="certModal">
+  <span class="modal-close" onclick="closeModal()">✕</span>
+  <img id="modalImg" src="" alt="Certificate">
+</div>
+
+<script>
+  // Typing animation
+  const texts = [
+    "Java Developer",
+    "Web Developer",
+    "Problem Solver",
+    "Quick Learner"
+  ];
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const current = texts[textIndex];
+    const el = document.getElementById('typing');
+
+    if (isDeleting) {
+      el.textContent = current.substring(0, charIndex--);
+    } else {
+      el.textContent = current.substring(0, charIndex++);
+    }
+
+    if (!isDeleting && charIndex === current.length + 1) {
+      isDeleting = true;
+      setTimeout(type, 1500);
+      return;
+    }
+
+    if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+    }
+
+    setTimeout(type, isDeleting ? 60 : 100);
+  }
+
+  type();
+
+  // Certificate modal
+  function openModal(imgSrc) {
+    document.getElementById('modalImg').src = imgSrc;
+    document.getElementById('certModal').classList.add('active');
+  }
+
+  function closeModal() {
+    document.getElementById('certModal').classList.remove('active');
+  }
+
+  document.getElementById('certModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+
+  // Back to top button
+  window.addEventListener('scroll', function() {
+    const btn = document.getElementById('backToTop');
+    if (window.scrollY > 300) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
+  });
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
